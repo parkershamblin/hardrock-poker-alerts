@@ -23,18 +23,17 @@ def send_email(subject, body):
 
 
 # log into Bravo Live Poker website and get html
-login_url = r"https://www.bravopokerlive.com/login/?ReturnUrl=%2fvenues%2fseminole-hard-rock-tampa%2f"
-homepage_url = r"https://www.bravopokerlive.com/venues/seminole-hard-rock-tampa/"
+login_page_url = r"https://www.bravopokerlive.com/login/?ReturnUrl=%2fvenues%2fseminole-hard-rock-tampa%2f"
+tampa_page_url = r"https://www.bravopokerlive.com/venues/seminole-hard-rock-tampa/"
 session = requests.Session()
 payload = {'Email': BRAVO_POKER_EMAIL, 'Password': BRAVO_POKER_PASSWORD}
-session.post(login_url, data=payload)
-html = session.get(homepage_url).text
+session.post(login_page_url, data=payload)
+html = session.get(tampa_page_url).text
 
 # convert tables in html into dataframes
 tables = pd.read_html(html)
 active_games = tables[0]
 waiting_list = tables[1]
-print(waiting_list)
 
 # Send an email if a 1-2 PLO game is running
 if '1-2 PLO' in active_games:
@@ -44,4 +43,3 @@ if '1-2 PLO' in active_games:
         subject=f"{n_games} 1-2 PLO Currently Running",
         body=f"There are {n_games} 1-2 PLO game currently running."
         )
-
