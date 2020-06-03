@@ -1,4 +1,4 @@
-# hard-rock-notifier
+# poker-notifier
 
 Pot Limit Omaha (PLO) games at the Hard Rock Tampa casino run somewhat infrequently so I've created this script to help keep me up to date on when PLO games are running at the Casino so I don't have to check the Hard Rock website everytime I want to play poker.
 
