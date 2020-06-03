@@ -1,1 +1,5 @@
 # hard-rock-notifier
+
+Pot Limit Omaha (PLO) games at the Hard Rock Tampa casino run somewhat infrequently so I've created this script to help keep me up to date on when PLO games are running so I don't have to continually check the Hard Rock website. You will have to create a Brave Live Poker account to use this script and see which games are running. To create an account click the red 'Signup' button on the top right of the screen [here](https://www.bravopokerlive.com/login/?ReturnUrl=%2fvenues%2fseminole-hard-rock-tampa%2f). Then you will have to replace the first two lines of code in the 'notifier.py' file with your account credentials.
+
+I used this [YouTube tutorial](https://www.youtube.com/watch?v=n2Cr_YRQk7o) to have the script run every hour to keep me up to date on when games are running.

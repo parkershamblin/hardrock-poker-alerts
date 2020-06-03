@@ -1,0 +1,4 @@
+pandas
+lxmx
+html5lib
+requests
